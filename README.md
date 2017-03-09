@@ -21,3 +21,11 @@ Following upgrades :
 You can actually read all the codelab without execute the code, although it is recommended for you to download and play with it. Take into account that chapter 1 only takes a first dig into the dataset with the objetive to know more about it and help distinguish in between continuous and categorical features. 
 
 The code has been proved with Tensorflow v1. 
+
+
+
+
+## FAQ
+1. Do I need to know a lot about Tensorflow for running into this codelab?
+No, you should have a basic understanding of datascience, variable modeling and neural nets. The architecture is clearly defined 
+
