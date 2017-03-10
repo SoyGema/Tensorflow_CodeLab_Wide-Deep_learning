@@ -22,8 +22,15 @@ You can actually read all the codelab without execute the code, although it is r
 
 The code has been proved with Tensorflow v1. 
 
-
-
+## CONFIGURATION
+You should have configured before running the Codelab:
+            # Python 
+            $ sudo apt-get update
+            $ sudo apt-get -y update
+            $ python3 -V
+            # Packages
+To manage software packages for Python, you can type :
+            $ pip3 install 'package_name'
 
 ## FAQ
 1. Do I need to know a lot about Tensorflow for running into this codelab?
