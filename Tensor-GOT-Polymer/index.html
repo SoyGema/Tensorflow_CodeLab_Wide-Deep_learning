@@ -1,1 +1,74 @@
-Here we store all the files for polymer building
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <!-- REMOVE THIS METATAG on public launch! -->
+    <meta name="robots" content="noindex">
+
+    <title>Discover what GOT Character will die next with TensorFlow</title>
+    <meta name="description" content="who-will-die-got-tensorflow-codelab description">
+
+    <!-- See https://goo.gl/OOhYW5 -->
+    <link rel="manifest" href="/manifest.json">
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="/bower_components/codelab-components/google-codelab-elements.html">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+    <style>
+      body {
+        font-family: "Roboto",sans-serif;
+        background-color: #e0e0e0;
+      }
+    </style>
+  </head>
+  <body>
+
+  <google-codelab 
+      title="Discover what GOT Character will die next with TensorFlow"
+      environment="web"
+      feedback-link="https://github.com/codelab-tf-got/codelab-tf-got.github.io/issues"
+      last-updated="2016-12-01">
+
+    <!-- STEP 1 -->
+    <google-codelab-step 
+      label="Presentation" 
+      step="1" 
+      duration="5">
+      <p>
+      
+      <img src="0_logo.png" alt="TensorFlow Game of Thrones"> 
+             <a href="http://tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> is a an open source library for numerical computation, specializing in machine learning applications. In this codelab, you will learn how to install and run TensorFlow on a single machine, and will predict deaths on Game of Thrones data using the tutorial Wide+Deep Learning Network.</p>
+      <h2>What are we going to be building?</h2>
+      <p>
+      This codelab presents wide+deep learning model execution taking into account Game of Thrones data for Death classification & prediction .
+The aim of this Codelab is to dig into wide+deep neural network model  to combine the benefits of memorization+generalization models, in which wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
+
+	The wide+deep learning tutorial comes within census data so we have been working with an analogous dataset taking into consideration Game of Thrones .</p>
+      <h2 class="checklist">What You&#39;ll Learn</h2>
+      <p>
+      In the next sections you will know  how the dataset works ,how to implement the wide+deep learning model  and finally some conclusions about the experimentation with the model, and more in detail . Besides and listed, you will learn how to:</p> 
+      <ul class="checklist">
+        <li>Familiarize yourself with Tensorflow  </li>
+        <li>How to select features for the wide part: choose the sparse base columns and crossed columns you want to use.</li>
+        <li>Select features for the deep part: choose the continuous columns, the embedding dimension for each categorical column, and the hidden layer sizes.</li>
+        <li>How to design the Wide+Deep Learning TensorFlow model </li>
+        <li>Put them all together in a Wide & Deep model (DNNLinearCombinedClassifier).</li>
+      </ul>
+
+      <h2 class="checklist">What You&#39;ll Need</h2>
+      <ul>
+        <li>A computer connected to the internet with Python2.7 installed </li>
+        <li>The libraries sklearn, pandas , numpy installed </li>
+        <li>A basic understanding of python and neural nets</li>
+        <li>A fast computer running OS X or Linux</li>
+        <li>A fair amount of time</li>
+      </ul>
+
+      <h2 class="checklist">The Goal</h2>
+      <ul>
+        <li>To made a classification model </li>
+        <li>Predict the next character death probability in Game of Thrones</li>
+      </ul>
+    
