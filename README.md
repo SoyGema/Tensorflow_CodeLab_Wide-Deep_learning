@@ -35,4 +35,10 @@ To manage software packages for Python, you can type :
 ## FAQ
 1. Do I need to know a lot about Tensorflow for running into this codelab?
 No, you should have a basic understanding of datascience, variable modeling and neural nets. The architecture is clearly defined 
-
+2. Wich Neural Network Model are you using for the codelab?
+We are using wide+deep learning model that combines the benefits of memorization+generalization 
+3. Can I commit or colaborate?
+Surething. We are looking for improvement in the following areas :
+      A. Getting more accurate data. If you are passionate about Game of Thrones and want to give us a hand with the dataset, you are more than wellcome.
+      B.Code . Yes, we would like to get more semantic and better with the code. Please don´t hesitate to push/commit in this journey
+      C. Feedback. We have create a feedback form that you can find at the end of the codelab. Please feel free to colaborate.
