@@ -13,7 +13,7 @@ For running this codelab, you should have installed in your machine
 This codelab has been updated in March 2017
 Following upgrades :
 
-0.Introduction
+0. Introduction
 1. Visualization behind GoT dataset
 2. Installing Tensorflow V.1
 3. Codelab execution
