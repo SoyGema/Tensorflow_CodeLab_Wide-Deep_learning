@@ -165,4 +165,27 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       <p>You can download the code and the data below. We suggest you to download both and put them in the same folder .  We will be explaining afterwards in each model which part of the codes matches with each part of wide + deep learning model . 
     Once you have it downloaded into your computer, you can play with it . </p>
       <h2>CodeLab Structure</h2>		    
+     <img src="_________.gif" alt="folder"> <p> Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </p>
+     <img src="_________.gif" alt="data search"> <p>      Open the file and change the path in your dataset :
+	    									  data_set = ‘your_path_here’</p>
+     <img src="_________.gif" alt="console"> <p>In console, execute the program  : 
+	                                                                          ~ $ python 'program'</p>
+     <img src="_________.gif" alt="console"> <p>In console, execute Tensorflow  : 
+	                                                                          ~ $ tensorboard --logdir =/tmp/model/</p>
+    </google-codelab-step>	   
+    <google-codelab-step>  
+      label="Network Structure" 
+      step="5" 
+      duration="10">
+      <p>
+      <h2>Network Structure</h2>
+      <p>During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the talk given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p> 
+      <p>The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
+      The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems </p>  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">Paper here!</a>
+      <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
+and recommend less relevant items when the user-item interactions are sparse and high-rank. 
+Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
+      <h2>Network Structure</h2>    
+
+	    				     
 	    
