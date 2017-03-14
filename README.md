@@ -42,3 +42,7 @@ Surething. We are looking for improvement in the following areas :
       A. Getting more accurate data. If you are passionate about Game of Thrones and want to give us a hand with the dataset, you are more than wellcome.
       B.Code . Yes, we would like to get more semantic and better with the code. Please don´t hesitate to push/commit in this journey
       C. Feedback. We have create a feedback form that you can find at the end of the codelab. Please feel free to colaborate.
+      D. Share. Do you think anyone you meet would you like to learn more about Neuralnets and also loves Game of Throne? You can share this codelab .
+4. Wich is the best way to experience this codelab?
+You can experience this codelab in a lot of different ways. The most significant is to read chapter 1 and enjoy some datascience about game of thrones, then download the code, and change the model m, having the opportunity to change the optimizers and the hidden layers .
+You can also read it without download the data .
