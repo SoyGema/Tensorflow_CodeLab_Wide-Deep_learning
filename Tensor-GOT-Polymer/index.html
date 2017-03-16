@@ -253,3 +253,14 @@ Tensorflow has released its own playground for embeddings using words and image 
        </code></pre> 
       <h2>Combining wide and deep learning model into one</h2>	    
       <p>The wide models and deep models are combined by summing up their final output log odds as the prediction, then feeding the prediction to a logistic loss function. All the graph definition and variable allocations have already been handled for you under the hood, so you simply need to create a DNNLinearCombinedClassifier: </p>
+      <pre><code>
+      import tempfile
+model_dir = tempfile.mkdtemp()
+m = tf.contrib.learn.DNNLinearCombinedClassifier(
+    model_dir=model_dir,
+    linear_feature_columns=wide_columns,
+    dnn_feature_columns=deep_columns,
+    dnn_hidden_units=[100, 50])      
+      </code></pre>
+      <h2>Optimizers</h2>
+      <img src="_________.jpg" alt="cercei_queen">
