@@ -216,4 +216,38 @@ We execute the linear classifier
 
 Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
       <img src="_________.jpg" alt="crossing_narrow_sea">    
-	    
+      <pre><code>
+      # Wide columns and deep columns.
+wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, book2,
+                book3, book4, book5, age, isAlive
+                tf.contrib.layers.crossed_column([house, title],
+                                                 hash_bucket_size=int(1e4)),
+                tf.contrib.layers.crossed_column(
+                    [age_buckets, house, title],
+                    hash_bucket_size=int(1e6)),
+                tf.contrib.layers.crossed_column([numDeadRelations, title],
+                                                 hash_bucket_size=int(1e4))]
+      </code></pre> 
+      <h2>Deep layer</h2>
+      <img src="_________.gif" alt="netkork">
+      <p>Generalization - Deep Model-  the model is a Feedfoward neural network that works with categorical features . there exist Transitivity of correlation and explores feature combinations that have never or rarely occurred in the past. It improves the diversity of recommended items . This generalization can be added by using features that are less granular . 
+So at the end this model is great for combining two different models of classification using neural Networks. You can see how this model has been working with </p> 
+      <h2>Deep layer</h2>  
+      <p>Embeddings are mathematical abstractions of categorical data. Their main purpose is to find relationships in between the data and show them in a 3 dimensional space.
+Tensorflow has released its own playground for embeddings using words and image data . You can find it here . </p>
+      <pre><code>
+	  deep_columns = [
+      tf.contrib.layers.embedding_column(title, dimension=8),
+      tf.contrib.layers.embedding_column(house, dimension=8),
+      tf.contrib.layers.embedding_column(culture, dimension=8),
+      tf.contrib.layers.embedding_column(isAliveNoble, dimension=8),
+      tf.contrib.layers.embedding_column(numberDeadRelations,
+                                         dimension=8),
+      tf.contrib.layers.embedding_column(popularity, dimension=8),
+      male,
+      spouse,
+      isPopular,
+      spouse,
+      isMarried,
+  ]  
+       </code></pre> 
