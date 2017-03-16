@@ -194,6 +194,26 @@ The abstraction of concepts in this text comes from the paper wide + deep learni
 and recommend less relevant items when the user-item interactions are sparse and high-rank. 
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <img src="_________.jpg" alt="meme_Stark">
-      <h2>Base Features</h2> 	    
-	    
+      <h2>Base Features</h2>
+      <p>Categorical variables are also known as discrete or qualitative variables. Categorical variables can be further categorized as either nominal, ordinal or dichotomous. Nominal variables are variables that have two or more categories, but which do not have an intrinsic order.
+Continuos variables are those that refers to continuous values such as numbers </p> 
+      <pre><code>
+CATEGORICAL_COLUMNS = ["alive", "title", "male", "culture",
+                       "house", "spouse", "isAliveMother", "isAliveFather", "isAliveHeir",
+                       "isAliveSpouse", "isMarried", "isNoble", "numDeadRelations",
+                       "boolDeadRelations", "isPopular" , "popularity"]
+
+CONTINUOUS_COLUMNS = ["name", "dateOfBirth",  "mother", "father",
+                      "heir", "book1", "book2", "book3", "book4", "book5", "age",
+                      "isAlive", "house", "title", "numDeadRelations"]
+      </code></pre>
+      <h2>Linear classiffier: Memorization</h2>	
+      <p>Memorization -Wide Model- Comes with learning the frequent co-ocurrence of features and exploiting the correlation available in the historical data. It is directly relevant to features . It can be achieved effectively using cross-product transformations over sparse features. Memorization is directly relevant to features. 
+The linear classifier digs into continuous features . In a practical approach you could say that this model is suitable for continuous -often numerical data- which already can be made some sense of. This model needs manual feature engineering for crossed relationships between columns. 
+Beyond you can find how we approach the linear classifier in the exercise :
+We define the linear variables in the columns
+We execute the linear classifier 
+
+Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
+      <img src="_________.jpg" alt="crossing_narrow_sea">    
 	    
