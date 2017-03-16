@@ -251,3 +251,5 @@ Tensorflow has released its own playground for embeddings using words and image 
       isMarried,
   ]  
        </code></pre> 
+      <h2>Combining wide and deep learning model into one</h2>	    
+      <p>The wide models and deep models are combined by summing up their final output log odds as the prediction, then feeding the prediction to a logistic loss function. All the graph definition and variable allocations have already been handled for you under the hood, so you simply need to create a DNNLinearCombinedClassifier: </p>
