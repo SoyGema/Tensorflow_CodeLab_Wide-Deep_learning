@@ -165,12 +165,12 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       <p>You can download the code and the data below. We suggest you to download both and put them in the same folder .  We will be explaining afterwards in each model which part of the codes matches with each part of wide + deep learning model . 
     Once you have it downloaded into your computer, you can play with it . </p>
       <h2>CodeLab Structure</h2>		    
-     <img src="_________.jpg" alt="folder"> <p> Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </p>
-     <img src="_________.jpg" alt="data search"> <p>      Open the file and change the path in your dataset :
+     <img src="folder.jpg" alt="folder"> <p> Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </p>
+     <img src="code.jpg" alt="data search"> <p>      Open the file and change the path in your dataset :
 	    									  data_set = ‘your_path_here’</p>
-     <img src="_________.jpg" alt="console"> <p>In console, execute the program  : 
+     <img src="console.jpg" alt="console"> <p>In console, execute the program  : 
 	                                                                          ~ $ python 'program'</p>
-     <img src="_________.jpg" alt="console"> <p>In console, execute Tensorflow  : 
+     <img src="console.jpg" alt="console"> <p>In console, execute Tensorflow  : 
 	                                                                          ~ $ tensorboard --logdir =/tmp/model/</p>
     </google-codelab-step>	   
     <google-codelab-step>  
@@ -215,7 +215,7 @@ We define the linear variables in the columns
 We execute the linear classifier 
 
 Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
-      <img src="_________.jpg" alt="crossing_narrow_sea">    
+      <img src="4_Comic.jpg" alt="crossing_narrow_sea">    
       <pre><code>
       # Wide columns and deep columns.
 wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, book2,
@@ -263,7 +263,7 @@ m = tf.contrib.learn.DNNLinearCombinedClassifier(
     dnn_hidden_units=[100, 50])      
       </code></pre>
       <h2>Optimizers</h2>
-      <img src="_________.jpg" alt="cercei_queen">
+      <img src="3_Comic.jpg" alt="cercei_queen">
       <p>The Optimizer base class provides methods to compute gradients for a loss and apply gradients to variables. A collection of subclasses implement classic optimization algorithms such as GradientDescent and Adagrad.
 Optimizers are a detailed part of neural net design that can offer a real performance difference among the neural net models. You can find  documentation about Tensorflow optimizers <a href="https://www.tensorflow.org/api_guides/python/train" target="_blank" rel="noopener">here</a>
 If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm.
