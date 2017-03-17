@@ -1,0 +1,28 @@
+sudo: false
+cache:
+- "./node_modules"
+- "./bower_components"
+env:
+  global:
+  - ENCRYPTION_KEY: xxx
+  - COMMIT_AUTHOR_NAME: Travis CI
+  - COMMIT_AUTHOR_EMAIL: santiagosaavedra+travis@gmail.com
+  - SOURCE_BRANCH: master
+  - TARGET_BRANCH: gh-pages
+language: node_js
+node_js:
+- stable
+script:
+- export REPO=`git config remote.origin.url`
+- export SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
+- export SHA=`git rev-parse --verify HEAD`
+- npm install polymer-cli@next bower
+- ./node_modules/.bin/bower install
+- ./node_modules/.bin/polymer build || true
+- bash .ci/deploy.sh || exit $?
+- openssl aes-256-cbc -K $encrypted_7842780245dc_key -iv $encrypted_7842780245dc_iv
+  -in .ci/deploy_key.enc -out .ci/deploy_key -d
+- chmod 600 .ci/deploy_key
+- eval `ssh-agent -s`
+- ssh-add .ci/deploy_key
+- cd out && git push $SSH_REPO $TARGET_BRANCH && cd ..
