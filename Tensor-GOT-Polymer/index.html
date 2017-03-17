@@ -26,7 +26,7 @@
   <body>
 
   <google-codelab 
-      title="Discover what GOT Character will die next with TensorFlow"
+      title="Discover what GOT Character will die next using TensorFlow"
       environment="web"
       feedback-link="https://github.com/codelab-tf-got/codelab-tf-got.github.io/issues"
       last-updated="2016-12-01">
@@ -46,7 +46,7 @@
       This codelab presents wide+deep learning model execution taking into account Game of Thrones data for Death classification & prediction .
 The aim of this Codelab is to dig into wide+deep neural network model  to combine the benefits of memorization+generalization models, in which wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
 
-	The wide+deep learning tutorial comes within census data so we have been working with an analogous dataset taking into consideration Game of Thrones .</p>
+  The wide+deep learning tutorial comes within census data so we have been working with an analogous dataset taking into consideration Game of Thrones .</p>
       <h2 class="checklist">What You&#39;ll Learn</h2>
       <p>
       In the next sections you will know  how the dataset works ,how to implement the wide+deep learning model  and finally some conclusions about the experimentation with the model, and more in detail . Besides and listed, you will learn how to:</p> 
@@ -66,7 +66,7 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
         <li>A fast computer running OS X or Linux</li>
         <li>A fair amount of time</li>
       </ul>
-	    
+      
           <h2 class="checklist">The Goal</h2>
       <ul>
         <li>To made a classification model </li>
@@ -80,7 +80,7 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
       </aside>
 
     </google-codelab-step>
-    <google-codelab-step> 
+    <google-codelab-step 
       label="Visualization behind GoT DataSet" 
       step="2" 
       duration="10">
@@ -95,24 +95,24 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
       <img src="2_question-visualisation.gif" alt="The five 5`ws about searches in Game of Thrones">     
       <h2>Data analysis</h2>
       <p>
-	During this 0 point  we will serve as company for Tensorflow Codelab based on Game of Thrones Data, in order to provide a Neural Network model to classify the probability of Death of Game of Thrones characters with wide+deep model .
+  During this 0 point  we will serve as company for Tensorflow Codelab based on Game of Thrones Data, in order to provide a Neural Network model to classify the probability of Death of Game of Thrones characters with wide+deep model .
 There is some data theory we will dive in when implementing the model, but first we will dig a little bit in the data in order to know more about the behaviour of our dataset </p>
       <p>
-####--------------------------COMPONENT BUTTON -------------------------------######
+<p><a href="https://github.com/LinkHere" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
 You can download the data from the button below. The original dataset has been released in Kaggle and we have been filling the information in Game of Thrones wiki focusing on title, culture . </p>
       <p>
 ####--------------------------COMPONENT TABLE --------------------------------#####
    
 In one first approach of the dataset we extract the following useful information about the dataset, wich we consider a significant first approach for finding correlations and relationships in between variables 
-	NUMBER OF CHARACTERS :  1946
-	MEDIAN OF  AGE : 27
-	      CORRELATION BETWEEN Number of Death Relationships and Popularity : 0.663 </p>
+  NUMBER OF CHARACTERS :  1946
+  MEDIAN OF  AGE : 27
+        CORRELATION BETWEEN Number of Death Relationships and Popularity : 0.663 </p>
       <P>
-	Here we have some graphics that show correlation among data , having into account that most of them show relationships in between popularity and other characteristics .
+  Here we have some graphics that show correlation among data , having into account that most of them show relationships in between popularity and other characteristics .
       <img src="1_CultureGOT.png" alt="Culture Analysis">  Game of Thrones character ecosystem shows a diverse culture approach that prints a diverse atmosphere , without a doubt it really brings to the table a rich atmosphere to enjoy. Among all cultures, the most significant are Valyrian - as House Targaryen members- , Northmen -like watchmen -that has the highest value in culture with 143 characters,  and Andals - like House Lannister. 
       <img src="_________.png" alt="Histogram of popularity">On this first approach of Histogram of popularity , more than 750 characters , about 40 % are ranged with 0 popularity ; being the most popular character listed – less than 20 , about a 1.02 % - the following, described together within .
 However, the median of popularity is 0.03344
-	Below we show a comparative table in between the top 10 popular characters and the top 10 probability likelihood of Death, can you find any relationship in between it? 
+  Below we show a comparative table in between the top 10 popular characters and the top 10 probability likelihood of Death, can you find any relationship in between it? 
 As a comparative conclusion, we might underline the popularity of Baratheons and Starks and their absence from the high probability of death and the amounts of Targaryens that seems to be related with life ending situations.
 ####--------------------------COMPONENT TABLE --------------------------------#####
 Baratheons are among the most popular and also far away from the most probability of death
@@ -134,18 +134,19 @@ Very popular characters -ranked as 1-  have an extrange +
      <p>As we dig into the data, so do we within the question we actually want to solve . How is popularity related to Death in Game of Thrones. </p>
      <img src="_________.gif" alt="you know nothing sql">
      <p>This first approach has been great ! No let´s move into installing Tensorflow and have a deeper understanding with wide+deep learning model to gain more knowledge  . </p>
+     </google-codelab-step>
     <!-- STEP 3 -->
-    <google-codelab-step>  
+    <google-codelab-step  
       label="Installing Tensorflow V1" 
       step="1" 
       duration="10">
       <p>
       <h2>Instalation of Tensorflow</h2>
       <p>Follow installation instructions for the following platforms </p>
-	    <p>Linux</p> <a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="noopener">linux</a>
-	    <p>Mac</p> <a href="https://www.tensorflow.org/install/install_mac" target="_blank" rel="noopener">Mac</a>
-	    <p>Windows</p> <a href="https://www.tensorflow.org/install/install_windows" target="_blank" rel="noopener">Windows</a>
-	    <p>From Source</p> <a href="https://www.tensorflow.org/install/install_sources" target="_blank" rel="noopener">From Source</a>
+      <p>Linux</p> <a href="https://www.tensorflow.org/install/install_linux" target="_blank" rel="noopener">linux</a>
+      <p>Mac</p> <a href="https://www.tensorflow.org/install/install_mac" target="_blank" rel="noopener">Mac</a>
+      <p>Windows</p> <a href="https://www.tensorflow.org/install/install_windows" target="_blank" rel="noopener">Windows</a>
+      <p>From Source</p> <a href="https://www.tensorflow.org/install/install_sources" target="_blank" rel="noopener">From Source</a>
       <p>Here we cover Linux installation but you can see different . So , since the v1 release, you can type </p>
       <pre><code>
 $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
@@ -153,27 +154,27 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
  $ pip install tensorflow-gpu  # Python 2.7;  GPU support
  $ pip3 install tensorflow-gpu # Python 3.n; GPU support
       </code></pre>
-	    <p>Great! Now you should have your instalation complete. You can test in your console typing in python</p>
-	    <p>>>> import tensrflow</p>
-    </google-codelab-step>	    
-    <google-codelab-step>  
+      <p>Great! Now you should have your instalation complete. You can test in your console typing in python</p>
+      <p>>>> import tensrflow</p>
+    </google-codelab-step>      
+    <google-codelab-step  
       label="Downloading the CodeLab" 
       step="4" 
       duration="10">
       <p>
-      <h2>Downloading the CodeLab</h2>	
+      <h2>Downloading the CodeLab</h2>  
       <p>You can download the code and the data below. We suggest you to download both and put them in the same folder .  We will be explaining afterwards in each model which part of the codes matches with each part of wide + deep learning model . 
     Once you have it downloaded into your computer, you can play with it . </p>
-      <h2>CodeLab Structure</h2>		    
+      <h2>CodeLab Structure</h2>        
      <img src="folder.jpg" alt="folder"> <p> Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </p>
      <img src="code.jpg" alt="data search"> <p>      Open the file and change the path in your dataset :
-	    									  data_set = ‘your_path_here’</p>
+                          data_set = ‘your_path_here’</p>
      <img src="console.jpg" alt="console"> <p>In console, execute the program  : 
-	                                                                          ~ $ python 'program'</p>
+                                                                            ~ $ python 'program'</p>
      <img src="console.jpg" alt="console"> <p>In console, execute Tensorflow  : 
-	                                                                          ~ $ tensorboard --logdir =/tmp/model/</p>
-    </google-codelab-step>	   
-    <google-codelab-step>  
+                                                                            ~ $ tensorboard --logdir =/tmp/model/</p>
+    </google-codelab-step>     
+    <google-codelab-step  
       label="Network Structure" 
       step="5" 
       duration="10">
@@ -187,9 +188,9 @@ and recommend less relevant items when the user-item interactions are sparse and
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <h2>Network Structure</h2>    
       <p> During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the <a href="https://www.youtube.com/watch?v=NV1tkZ9Lq48&list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&index=17" target="_blank" rel="noopener">talk</a> given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p>
-      <img src="_________.gif" alt="network">    				     
+      <img src="_________.gif" alt="network">                
       <p> The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
-The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>	    
+The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>     
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
 and recommend less relevant items when the user-item interactions are sparse and high-rank. 
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
@@ -207,7 +208,7 @@ CONTINUOUS_COLUMNS = ["name", "dateOfBirth",  "mother", "father",
                       "heir", "book1", "book2", "book3", "book4", "book5", "age",
                       "isAlive", "house", "title", "numDeadRelations"]
       </code></pre>
-      <h2>Linear classiffier: Memorization</h2>	
+      <h2>Linear classiffier: Memorization</h2> 
       <p>Memorization -Wide Model- Comes with learning the frequent co-ocurrence of features and exploiting the correlation available in the historical data. It is directly relevant to features . It can be achieved effectively using cross-product transformations over sparse features. Memorization is directly relevant to features. 
 The linear classifier digs into continuous features . In a practical approach you could say that this model is suitable for continuous -often numerical data- which already can be made some sense of. This model needs manual feature engineering for crossed relationships between columns. 
 Beyond you can find how we approach the linear classifier in the exercise :
@@ -236,7 +237,7 @@ So at the end this model is great for combining two different models of classifi
       <p>Embeddings are mathematical abstractions of categorical data. Their main purpose is to find relationships in between the data and show them in a 3 dimensional space.
 Tensorflow has released its own playground for embeddings using words and image data . You can find it here . </p>
       <pre><code>
-	  deep_columns = [
+    deep_columns = [
       tf.contrib.layers.embedding_column(title, dimension=8),
       tf.contrib.layers.embedding_column(house, dimension=8),
       tf.contrib.layers.embedding_column(culture, dimension=8),
@@ -251,7 +252,7 @@ Tensorflow has released its own playground for embeddings using words and image 
       isMarried,
   ]  
        </code></pre> 
-      <h2>Combining wide and deep learning model into one</h2>	    
+      <h2>Combining wide and deep learning model into one</h2>      
       <p>The wide models and deep models are combined by summing up their final output log odds as the prediction, then feeding the prediction to a logistic loss function. All the graph definition and variable allocations have already been handled for you under the hood, so you simply need to create a DNNLinearCombinedClassifier: </p>
       <pre><code>
       import tempfile
@@ -267,7 +268,7 @@ m = tf.contrib.learn.DNNLinearCombinedClassifier(
       <p>The Optimizer base class provides methods to compute gradients for a loss and apply gradients to variables. A collection of subclasses implement classic optimization algorithms such as GradientDescent and Adagrad.
 Optimizers are a detailed part of neural net design that can offer a real performance difference among the neural net models. You can find  documentation about Tensorflow optimizers <a href="https://www.tensorflow.org/api_guides/python/train" target="_blank" rel="noopener">here</a>
 If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm.
-	Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
+  Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
 ####--------------------------COMPONENT TABLE -------------------------------######
       <h2>Comparison</h2>
       <p>The code has been executed taking into account serveral models for the same dataset ; You can find the table bellow in wich we print the accuracy and other significant data about each part of the model :
@@ -288,3 +289,7 @@ In the model, changing the activation function from ……………………. To
 
 There is still work to do to optimize this codelab.
 Take this feedback form to tell us more about how useful it was and dig into it if you want to know more </p>   
+
+
+</body>
+</html>

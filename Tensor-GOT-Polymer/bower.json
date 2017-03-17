@@ -1,9 +1,8 @@
 {
-  "name": "tensorflow-codelab-game-of-thrones",
+  "name": "polymer-2-codelab",
   "main": "index.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "code-prettify": "google/code-prettify",
     "codelab-components": "googlecodelabs/codelab-components#^2.0.2"
   },
   "devDependencies": {
