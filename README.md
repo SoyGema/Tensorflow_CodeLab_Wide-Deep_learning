@@ -1,3 +1,6 @@
+
+
+![alt tag](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/0_Logo.jpg)
 # Tensorflow Codelab : dive into wide+deep learning 
 Wide+Deep learning Neural Network Tensorflow
 Data used : Game of thrones data set from kaggle
@@ -46,3 +49,10 @@ Surething. We are looking for improvement in the following areas :
 4. Wich is the best way to experience this codelab?
 You can experience this codelab in a lot of different ways. The most significant is to read chapter 1 and enjoy some datascience about game of thrones, then download the code, and change the model m, having the opportunity to change the optimizers and the hidden layers .
 You can also read it without download the data .
+
+Please, note that this is an going work and you might find some improvement areas.
+Do not hesitate to give any idea or feedback about improvements!
+Thanks!!
+
+![alt tag](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/3_Comic.png)
+
