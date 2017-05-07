@@ -79,16 +79,12 @@ dataset_file_name = "../dataset/character-predictions.csv"
 df_base = pd.read_csv(dataset_file_name, sep=',',) # names=COLUMNS, skipinitialspace=True, skiprows=1)
 
 CATEGORICAL_COLUMN_NAMES = [
-    'male',
-    'culture',
-    'mother',
-    'father',
-    'title',
-    'heir',
     'house',
-    'spouse',
-    'numDeadRelations',
-    'boolDeadRelations',
+    'culture',
+    'title',
+    'name',
+    'is Alive',
+    'is Popular',
 ]
 
 BINARY_COLUMNS = [
@@ -122,7 +118,7 @@ AGE_BINS = [ 0, 4, 8, 15, 18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 80, 65535 ]
 CONTINUOUS_COLUMNS = [
   'age',
   'popularity',
-  'dateOfBirth',
+  'numDeadrelations',
 ]
 
 UNUSED_COLUMNS = [
