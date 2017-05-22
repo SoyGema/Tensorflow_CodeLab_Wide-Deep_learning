@@ -78,7 +78,7 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
         <strong>Note:</strong>  This codelab has quiet periods of downloading and training. During those times, it might be a fun idea to play with the <a href="http://playground.tensorflow.org/" target="_blank" rel="noopener">TensorFlow Playground to learn more about neural net design</a>
         </p>
       </aside>
-      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/Data%20is%20coming!.png" alt="TensorFlow Game of Thrones">
+      <img src="Data is coming!.png" alt="TensorFlow Game of Thrones">
     </google-codelab-step>
     <google-codelab-step 
       label="Visualization behind GoT DataSet" 
@@ -102,16 +102,16 @@ There is some data theory we will dive in when implementing the model, but first
 <p><a href="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/wide%2Bdeep_code" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
 You can download the data from the button below. The original dataset has been released in Kaggle and we have been filling the information in Game of Thrones wiki focusing on title, culture . </p>
       <p>
-      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/Table1.jpg" alt="The five 5`ws about searches in Game of Thrones">
+      <img src="Table1.jpg" alt="Data">
    
 In one first approach of the dataset we extract the following useful information about the dataset, wich we consider a significant first approach for finding correlations and relationships in between variables 
   NUMBER OF CHARACTERS :  1946
   MEDIAN OF  AGE : 27
         CORRELATION BETWEEN Number of Death Relationships and Popularity : 0.663 </p>
-      <P>
+      <p>
   Here we have some graphics that show correlation among data , having into account that most of them show relationships in between popularity and other characteristics .
       <img src="1_CultureGOT.png" alt="Culture Analysis">  Game of Thrones character ecosystem shows a diverse culture approach that prints a diverse atmosphere , without a doubt it really brings to the table a rich atmosphere to enjoy. Among all cultures, the most significant are Valyrian - as House Targaryen members- , Northmen -like watchmen -that has the highest value in culture with 143 characters,  and Andals - like House Lannister. 
-      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/histogram_pop.jpg" alt="Histogram of popularity">On this first approach of Histogram of popularity , more than 750 characters , about 40 % are ranged with 0 popularity ; being the most popular character listed – less than 20 , about a 1.02 % - the following, described together within .
+      <img src="histogram_pop.jpg" alt="Histogram of popularity">On this first approach of Histogram of popularity , more than 750 characters , about 40 % are ranged with 0 popularity ; being the most popular character listed – less than 20 , about a 1.02 % - the following, described together within .
 However, the median of popularity is 0.03344
   Below we show a comparative table in between the top 10 popular characters and the top 10 probability likelihood of Death, can you find any relationship in between it? 
 As a comparative conclusion, we might underline the popularity of Baratheons and Starks and their absence from the high probability of death and the amounts of Targaryens that seems to be related with life ending situations.
@@ -240,7 +240,7 @@ wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, boo
       step="5.2" 
       duration="10">      
       <h2>Deep layer</h2>
-      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/Deep.gif" alt="netkork">
+      <img src="Deep.gif" alt="netkork">
       <p>Generalization - Deep Model-  the model is a Feedfoward neural network that works with categorical features . there exist Transitivity of correlation and explores feature combinations that have never or rarely occurred in the past. It improves the diversity of recommended items . This generalization can be added by using features that are less granular . 
 So at the end this model is great for combining two different models of classification using neural Networks. You can see how this model has been working with </p> 
       <h2>Deep layer</h2>  
