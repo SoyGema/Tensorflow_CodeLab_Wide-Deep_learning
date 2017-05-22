@@ -168,6 +168,7 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
     Once you have it downloaded into your computer, you can play with it . </p>              
       <h2 class="checklist">CodeLab Structure</h2>
       <ul>
+      <img src="Download_thecodelab.jpg" alt="network">        
         <li>Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csvd </li>
         <li>Open the file and change the path in your dataset : data_set = ‘your_path_here’ </li>
         <li>In console, execute the program  :~ $ python 'program'</li>
@@ -189,7 +190,7 @@ and recommend less relevant items when the user-item interactions are sparse and
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <h2>Network Structure</h2>    
       <p> During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the <a href="https://www.youtube.com/watch?v=NV1tkZ9Lq48&list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&index=17" target="_blank" rel="noopener">talk</a> given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p>
-      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/Wide%2BDeepLearning.gif" alt="network">                
+      <img src="Wide+DeepLearning.gif" alt="network">                
       <p> The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
 The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>     
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
@@ -287,7 +288,7 @@ m = tf.contrib.learn.DNNLinearCombinedClassifier(
 Optimizers are a detailed part of neural net design that can offer a real performance difference among the neural net models. You can find  documentation about Tensorflow optimizers <a href="https://www.tensorflow.org/api_guides/python/train" target="_blank" rel="noopener">here</a>
 If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm.
   Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
-####--------------------------COMPONENT TABLE -------------------------------######
+      <img src="" alt="cercei_queen">
       <h2>Comparison</h2>
       <p>The code has been executed taking into account serveral models for the same dataset ; You can find the table bellow in wich we print the accuracy and other significant data about each part of the model :
 Please, take into account that all the modifications are inside m= tf.contrib.learn.DNNLinearCombinedClassifier tensorflow class and the design has been modeled with the wide and the deep settings . 
