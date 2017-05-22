@@ -189,7 +189,7 @@ and recommend less relevant items when the user-item interactions are sparse and
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <h2>Network Structure</h2>    
       <p> During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the <a href="https://www.youtube.com/watch?v=NV1tkZ9Lq48&list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&index=17" target="_blank" rel="noopener">talk</a> given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p>
-      <img src="_________.gif" alt="network">                
+      <img src="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/Wide%2BDeepLearning.gif" alt="network">                
       <p> The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
 The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>     
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
@@ -209,6 +209,10 @@ CONTINUOUS_COLUMNS = ["name", "dateOfBirth",  "mother", "father",
                       "heir", "book1", "book2", "book3", "book4", "book5", "age",
                       "isAlive", "house", "title", "numDeadRelations"]
       </code></pre>
+    <google-codelab-step  
+      label="Network Structure : Linear Classifier" 
+      step="5.1" 
+      duration="10">
       <h2>Linear classiffier: Memorization</h2> 
       <p>Memorization -Wide Model- Comes with learning the frequent co-ocurrence of features and exploiting the correlation available in the historical data. It is directly relevant to features . It can be achieved effectively using cross-product transformations over sparse features. Memorization is directly relevant to features. 
 The linear classifier digs into continuous features . In a practical approach you could say that this model is suitable for continuous -often numerical data- which already can be made some sense of. This model needs manual feature engineering for crossed relationships between columns. 
@@ -217,7 +221,7 @@ We define the linear variables in the columns
 We execute the linear classifier 
 
 Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
-      <img src="4_Comic.jpg" alt="crossing_narrow_sea">    
+      <img src="4_Comic.png" alt="crossing_narrow_sea">    
       <pre><code>
       # Wide columns and deep columns.
 wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, book2,
@@ -230,6 +234,7 @@ wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, boo
                 tf.contrib.layers.crossed_column([numDeadRelations, title],
                                                  hash_bucket_size=int(1e4))]
       </code></pre> 
+    </google-codelab-step> 
       <h2>Deep layer</h2>
       <img src="_________.gif" alt="netkork">
       <p>Generalization - Deep Model-  the model is a Feedfoward neural network that works with categorical features . there exist Transitivity of correlation and explores feature combinations that have never or rarely occurred in the past. It improves the diversity of recommended items . This generalization can be added by using features that are less granular . 
