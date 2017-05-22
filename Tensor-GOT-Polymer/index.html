@@ -39,7 +39,7 @@
       <p>
 
       
-      <img src="0_logo.jpg" alt="TensorFlow Game of Thrones"> 
+      <img src="0_Logo.jpg" alt="TensorFlow Game of Thrones"> 
              <a href="http://tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> is a an open source library for numerical computation, specializing in machine learning applications. In this codelab, you will learn how to install and run TensorFlow on a single machine, and will predict deaths on Game of Thrones data using the tutorial Wide+Deep Learning Network.</p>
       <h2>What are we going to be building?</h2>
       <p>
@@ -209,6 +209,7 @@ CONTINUOUS_COLUMNS = ["name", "dateOfBirth",  "mother", "father",
                       "heir", "book1", "book2", "book3", "book4", "book5", "age",
                       "isAlive", "house", "title", "numDeadRelations"]
       </code></pre>
+    </google-codelab-step>   
     <google-codelab-step  
       label="Network Structure : Linear Classifier" 
       step="5.1" 
@@ -260,7 +261,9 @@ Tensorflow has released its own playground for embeddings using words and image 
       isPopular,
       spouse,
       isMarried,
-  ]  
+  ]
+    </google-codelab-step>  
+    <google-codelab-step     
        </code></pre> 
       <h2>Combining wide and deep learning model into one</h2>      
       <p>The wide models and deep models are combined by summing up their final output log odds as the prediction, then feeding the prediction to a logistic loss function. All the graph definition and variable allocations have already been handled for you under the hood, so you simply need to create a DNNLinearCombinedClassifier: </p>
@@ -273,6 +276,11 @@ m = tf.contrib.learn.DNNLinearCombinedClassifier(
     dnn_feature_columns=deep_columns,
     dnn_hidden_units=[100, 50])      
       </code></pre>
+    </google-codelab-step>
+    <google-codelab-step  
+      label="Optimizers" 
+      step="5.4" 
+      duration="10"> 
       <h2>Optimizers</h2>
       <img src="3_Comic.png" alt="cercei_queen">
       <p>The Optimizer base class provides methods to compute gradients for a loss and apply gradients to variables. A collection of subclasses implement classic optimization algorithms such as GradientDescent and Adagrad.
