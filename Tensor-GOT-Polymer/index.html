@@ -288,12 +288,17 @@ m = tf.contrib.learn.DNNLinearCombinedClassifier(
 Optimizers are a detailed part of neural net design that can offer a real performance difference among the neural net models. You can find  documentation about Tensorflow optimizers <a href="https://www.tensorflow.org/api_guides/python/train" target="_blank" rel="noopener">here</a>
 If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm.
   Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
-      <img src="" alt="cercei_queen">
+      <img src="optimizer.jpg" alt="cercei_queen">
+    </google-codelab-step>
+    <google-codelab-step  
+      label="Comparissons and Conclussions" 
+      step="6" 
+      duration="10">     
       <h2>Comparison</h2>
       <p>The code has been executed taking into account serveral models for the same dataset ; You can find the table bellow in wich we print the accuracy and other significant data about each part of the model :
 Please, take into account that all the modifications are inside m= tf.contrib.learn.DNNLinearCombinedClassifier tensorflow class and the design has been modeled with the wide and the deep settings . 
 Please, to know more about this function visit the awesome <a href="https://www.tensorflow.org/api_docs/python/tf/contrib/learn/DNNLinearCombinedClassifier" target="_blank" rel="noopener">documentation.</a></p>
-####--------------------------COMPONENT TABLE -------------------------------######  
+
       <h2>Conclusions</h2> 
       <p>Wide+deep learning is great for large scale datasets that take into account both categorical and continuous features that include a numerical and embeding form . Having a self critical mode, we might have used a more large dataset with more Game of Thrones characters  although the nature of the dataset is great for continuous and categorical clasification.
 The accuracy of the model changes by design taking into account the hidden units of the model, the activation function, and the optimizers. Having more or less layers and hidden units does not imply that the functioning of the model might be better or worse . 
@@ -301,6 +306,8 @@ Choosing the wide and deep learning settings carefully taking into account the p
 The best result of the model is pasted with the accuracy as follows :
 
 
+        You can help us with the results of changing the model, generalizing in our two main hypothesis :
+        
 In the model, if you increases the hidden layers, the accuracy of the model …………..
 In the model, changing the activation function from ……………………. To ………………. increases/decreases accuracy in ………….
 
