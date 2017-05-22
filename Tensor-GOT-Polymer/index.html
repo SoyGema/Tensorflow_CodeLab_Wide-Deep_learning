@@ -39,13 +39,13 @@
       <p>
 
       
-      <img src="0_logo.png" alt="TensorFlow Game of Thrones"> 
+      <img src="0_logo.jpg" alt="TensorFlow Game of Thrones"> 
              <a href="http://tensorflow.org/" target="_blank" rel="noopener">TensorFlow</a> is a an open source library for numerical computation, specializing in machine learning applications. In this codelab, you will learn how to install and run TensorFlow on a single machine, and will predict deaths on Game of Thrones data using the tutorial Wide+Deep Learning Network.</p>
       <h2>What are we going to be building?</h2>
       <p>
       This codelab presents wide+deep learning model execution taking into account Game of Thrones data for Death classification & prediction .
-The aim of this Codelab is to dig into wide+deep neural network model  to combine the benefits of memorization+generalization models, in which wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
-
+The aim of this Codelab is to dig into wide+deep neural network model  to combine the benefits of memorization+generalization models, in which wide model is directly relevant to features and deep model improves the diversity of recommended systems. </p>
+      <p>
   The wide+deep learning tutorial comes within census data so we have been working with an analogous dataset taking into consideration Game of Thrones .</p>
       <h2 class="checklist">What You&#39;ll Learn</h2>
       <p>
@@ -89,7 +89,8 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
       <img src="1_Comic.png" alt="TensorFlow JohnSnow & Sam correlation"> 
       <p>
       The GoT dataset was compiled from a <a href="https://www.kaggle.com/" target="_blank" rel="noopener">kaggle</a> dataset and transformed to offer more information using Game of Thrones wiki . 
-      Before going into a deeper data analysis, we would like to offer a view about the power of search with Answer the public tool. Using this visualization about the main five W some questions could be underlined about game of Thrones using  the searches in US and UK 
+      Before going into a deeper data analysis, we would like to offer a view about the power of search with Answer the public tool. Using this visualization about the main five W some questions could be underlined about game of Thrones using  the searches in US and UK </p> 
+      <p>
       These visualization flashlights the public interest about Game of Thrones deaths related to Why,What,When and How. In most of the searches there comes an interest about why all characters die, in which book each character die or in which TV season as well as searches about video compilations . Also we might  find comparisons to Walking Death. In a first general approach, we can see that searches about Game of Thrones Deaths are related to which deaths are packaged in each book or season. 
       The question ‘how’ might offer us a more practical approach about  people searching for compilation of deaths, Youtube videos about it. </p>
       <img src="2_question-visualisation.gif" alt="The five 5`ws about searches in Game of Thrones">     
@@ -98,7 +99,7 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
   During this 0 point  we will serve as company for Tensorflow Codelab based on Game of Thrones Data, in order to provide a Neural Network model to classify the probability of Death of Game of Thrones characters with wide+deep model .
 There is some data theory we will dive in when implementing the model, but first we will dig a little bit in the data in order to know more about the behaviour of our dataset </p>
       <p>
-<p><a href="https://github.com/LinkHere" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
+<p><a href="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/wide%2Bdeep_code" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
 You can download the data from the button below. The original dataset has been released in Kaggle and we have been filling the information in Game of Thrones wiki focusing on title, culture . </p>
       <p>
 ####--------------------------COMPONENT TABLE --------------------------------#####
@@ -117,7 +118,7 @@ As a comparative conclusion, we might underline the popularity of Baratheons and
 ####--------------------------COMPONENT TABLE --------------------------------#####
 Baratheons are among the most popular and also far away from the most probability of death
       <p>
- <img src="3_TensorflowDPr.gif" alt="Popularity VS number of Death Relations">
+ <img src="3_Tensorflow_PDr.gif" alt="Popularity VS number of Death Relations">
 With this graph we would like to enlighten us to solve the following questions
 Is there a relationship in between the popularity of a character and the number of death Characters?
 As you can see the popularity listed as 1 there is a constant interval that goes from 1 to 10 deaths. Also there is presence in more than 15 deaths
@@ -132,8 +133,8 @@ Very popular characters -ranked as 1-  have an extrange +
      </p>
      <h2>"Once you are very popular, there 're seems to be a linear incremental pattern of Death Relationship</h2>
      <p>As we dig into the data, so do we within the question we actually want to solve . How is popularity related to Death in Game of Thrones. </p>
-     <img src="_________.gif" alt="you know nothing sql">
-     <p>This first approach has been great ! No let´s move into installing Tensorflow and have a deeper understanding with wide+deep learning model to gain more knowledge  . </p>
+     <img src="2_Comic.png" alt="you know nothing sql">
+     <p>This first approach has been great ! Now let´s move into installing Tensorflow and have a deeper understanding with wide+deep learning model to gain more knowledge  . </p>
      </google-codelab-step>
     <!-- STEP 3 -->
     <google-codelab-step  
@@ -194,7 +195,7 @@ The abstraction of concepts in this text comes from the paper wide + deep learni
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
 and recommend less relevant items when the user-item interactions are sparse and high-rank. 
 Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
-      <img src="_________.jpg" alt="meme_Stark">
+      <img src="MEME_george.jpg" alt="meme_Stark">
       <h2>Base Features</h2>
       <p>Categorical variables are also known as discrete or qualitative variables. Categorical variables can be further categorized as either nominal, ordinal or dichotomous. Nominal variables are variables that have two or more categories, but which do not have an intrinsic order.
 Continuos variables are those that refers to continuous values such as numbers </p> 
