@@ -91,8 +91,9 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
       The GoT dataset was compiled from a <a href="https://www.kaggle.com/" target="_blank" rel="noopener">kaggle</a> dataset and transformed to offer more information using Game of Thrones wiki . 
       Before going into a deeper data analysis, we would like to offer a view about the power of search with Answer the public tool. Using this visualization about the main five W some questions could be underlined about game of Thrones using  the searches in US and UK </p> 
       <p>
-      These visualization flashlights the public interest about Game of Thrones deaths related to Why,What,When and How. In most of the searches there comes an interest about why all characters die, in which book each character die or in which TV season as well as searches about video compilations . Also we might  find comparisons to Walking Death. In a first general approach, we can see that searches about Game of Thrones Deaths are related to which deaths are packaged in each book or season. 
-      The question ‘how’ might offer us a more practical approach about  people searching for compilation of deaths, Youtube videos about it. </p>
+      These visualization flashlights the public interest about Game of Thrones deaths related to WHY,WHAT,WHEN and HOW. In most of the searches there comes an interest about why all characters die, in which book each character die or in which TV season as well as searches about video compilations . Also we might  find comparisons to Walking Death. </p>
+      <p>In a first general approach, we can see that searches about Game of Thrones Deaths are related to which deaths are packaged in each book or season. 
+      The question ‘HOW’ might offer us a more practical approach about  people searching for compilation of deaths, Youtube videos about it. </p>
       <img src="2_question-visualisation.gif" alt="The five 5`ws about searches in Game of Thrones">     
       <h2>Data analysis</h2>
       <p>
@@ -113,27 +114,22 @@ In one first approach of the dataset we extract the following useful information
   Here we have some graphics that show correlation among data , having into account that most of them show relationships in between popularity and other characteristics .
       <img src="1_CultureGOT.png" alt="Culture Analysis">  Game of Thrones character ecosystem shows a diverse culture approach that prints a diverse atmosphere , without a doubt it really brings to the table a rich atmosphere to enjoy. Among all cultures, the most significant are Valyrian - as House Targaryen members- , Northmen -like watchmen -that has the highest value in culture with 143 characters,  and Andals - like House Lannister. 
       <img src="histogram_pop.jpg" alt="Histogram of popularity">On this first approach of Histogram of popularity , more than 750 characters , about 40 % are ranged with 0 popularity ; being the most popular character listed – less than 20 , about a 1.02 % - the following, described together within .
-However, the median of popularity is 0.03344
-  Below we show a comparative table in between the top 10 popular characters and the top 10 probability likelihood of Death, can you find any relationship in between it? 
-As a comparative conclusion, we might underline the popularity of Baratheons and Starks and their absence from the high probability of death and the amounts of Targaryens that seems to be related with life ending situations.
-
-Baratheons are among the most popular and also far away from the most probability of death
+However, the median of popularity is 0.03344 </p>
       <p>
  <img src="3_Tensorflow_PDr.gif" alt="Popularity VS number of Death Relations">
 With this graph we would like to enlighten us to solve the following questions
-Is there a relationship in between the popularity of a character and the number of death Characters?
-As you can see the popularity listed as 1 there is a constant interval that goes from 1 to 10 deaths. Also there is presence in more than 15 deaths
+      <p>Is there a relationship in between the popularity of a character and the number of death Characters? </p>
+<p>As you can see the popularity listed as 1 there is a constant interval that goes from 1 to 10 deaths. Also there is presence in more than 15 deaths </p>
 
-On the Y axis we can find a score that goes from 0 to 1 and gives us an idea of the popularity of the current character and scored on the X axis the number of death relationships that go from 0 to 14. The visualization of this graph drops some conclusions upon us :
-    0) Most popularity characters are ranked from 0 to 0.6 and have 0 dead relationships .
-Very popular characters -ranked as 1-  have an extrange +
-    1) We could draw an exponential classify curve that give us a certain pattern and given the following conclusions .
---Most of unpopular characters have  no dead relationships
-–There is a linear incremental number of dead relationships once the character is very popular 
---A  very popular character with a high number of dead relations can be considered an outlier . 
-     </p>
+<p>On the Y axis we can find a score that goes from 0 to 1 and gives us an idea of the popularity of the current character and scored on the X axis the number of death relationships that go from 0 to 14. The visualization of this graph drops some conclusions upon us : </p>
+    <p>0) Most popularity characters are ranked from 0 to 0.6 and have 0 dead relationships . </p>
+    <p>1) We could draw an exponential classify curve that give us a certain pattern and given the following conclusions .</p>
+    <p>--Most of unpopular characters have  no dead relationships </p>
+    <p>--There is a linear incremental number of dead relationships once the character is very popular </p>
+    <p>--A very popular character with a high number of dead relations can be considered an outlier . </p>
+
      <h2>"Once you are very popular, there 're seems to be a linear incremental pattern of Death Relationship</h2>
-     <p>As we dig into the data, so do we within the question we actually want to solve . How is popularity related to Death in Game of Thrones. </p>
+     <p>As we dig into the data, so do we within the question we actually want to solve...How is popularity related to Death in Game of Thrones?. </p>
      <img src="2_Comic.png" alt="you know nothing sql">
      <p>This first approach has been great ! Now let´s move into installing Tensorflow and have a deeper understanding with wide+deep learning model to gain more knowledge  . </p>
      </google-codelab-step>
@@ -157,7 +153,13 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
  $ pip3 install tensorflow-gpu # Python 3.n; GPU support
       </code></pre>
       <p>Great! Now you should have your instalation complete. You can test in your console typing in python</p>
-      <p>>>> import tensrflow</p>
+      <pre><code>
+      >>> import tensorflow
+      >>> hello = tf.constant('Hello, Tensorflow!')
+      >>> sess = tf.Session()
+      >>> sess.run(hello)
+      'Hello, Tensorflow!'
+      </code></pre>      
     </google-codelab-step>      
     <google-codelab-step  
       label="Downloading the CodeLab" 
@@ -170,7 +172,7 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       <h2 class="checklist">CodeLab Structure</h2>
       <ul>
       <img src="Download_thecodelab.jpg" alt="network">        
-        <li>Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csvd </li>
+        <li>Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </li>
         <li>Open the file and change the path in your dataset : data_set = ‘your_path_here’ </li>
         <li>In console, execute the program  :~ $ python 'program' --training_mode learn_runner --model_dir /Base directory for output models --model_type 'wide_n_deep' --steps 200</li>
         <li>In console, execute Tensorflow  :~ $ tensorboard --logdir =/tmp/model/ </li>
@@ -182,21 +184,14 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       step="5" 
       duration="10">
       <p>
-      <h2>Network Structure</h2>
-      <p>During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the talk given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p> 
-      <p>The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
-      The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems </p>  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">Paper here!</a>
-      <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
-and recommend less relevant items when the user-item interactions are sparse and high-rank. 
-Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <h2>Network Structure</h2>    
       <p> During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the <a href="https://www.youtube.com/watch?v=NV1tkZ9Lq48&list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&index=17" target="_blank" rel="noopener">talk</a> given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p>
       <img src="Wide+DeepLearning.gif" alt="network">                
       <p> The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
 The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>     
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
-and recommend less relevant items when the user-item interactions are sparse and high-rank. 
-Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
+        and recommend less relevant items when the user-item interactions are sparse and high-rank. </p>
+      <p>Wide+Deep learning combines the benefits the Memorization and generalization , which is a current challenge for learning systems. Each part of the nets shows it challenges as well, so in Wide net we can find crossed columns and in deep learning we can find embeddings as the most significant concepts operating in each part of the Network . </p>
       <img src="MEME_george.jpg" alt="meme_Stark">
       <h2>Base Features</h2>
       <p>Categorical variables are also known as discrete or qualitative variables. Categorical variables can be further categorized as either nominal, ordinal or dichotomous. Nominal variables are variables that have two or more categories, but which do not have an intrinsic order.
@@ -228,9 +223,9 @@ CONTINUOUS_COLUMNS = only_existing([
       step="5.1" 
       duration="10">
       <h2>Linear classiffier: Memorization</h2> 
-      <p>Memorization -Wide Model- Comes with learning the frequent co-ocurrence of features and exploiting the correlation available in the historical data. It is directly relevant to features . It can be achieved effectively using cross-product transformations over sparse features. Memorization is directly relevant to features. 
-The linear classifier digs into continuous features . In a practical approach you could say that this model is suitable for continuous -often numerical data- which already can be made some sense of. This model needs manual feature engineering for crossed relationships between columns. 
-Beyond you can find how we approach the linear classifier in the exercise :
+      <p>Memorization -Wide Model- Comes with learning the frequent co-ocurrence of features and exploiting the correlation available in the historical data. It is directly relevant to features . It can be achieved effectively using cross-product transformations over sparse features. Memorization is directly relevant to features. </p>
+      <p>The linear classifier digs into continuous features . In a practical approach you could say that this model is suitable for continuous -often numerical data- which already can be made some sense of. This model needs manual feature engineering for crossed relationships between columns. </p>
+<p>Beyond you can find how we approach the linear classifier in the exercise : 
 We define the linear variables in the columns
 We execute the linear classifier 
 
@@ -283,14 +278,14 @@ So at the end this model is great for combining two different models of classifi
       duration="10"> 
       <h2>Optimizers</h2>
       <img src="3_Comic.png" alt="cercei_queen">
-      <p>The Optimizer base class provides methods to compute gradients for a loss and apply gradients to variables. A collection of subclasses implement classic optimization algorithms such as GradientDescent and Adagrad.
+      <p>The Optimizer base class provides methods to compute gradients for a loss and apply gradients to variables. A collection of subclasses implement classic optimization algorithms such as GradientDescent and Adagrad. </p>
 Optimizers are a detailed part of neural net design that can offer a real performance difference among the neural net models. You can find  documentation about Tensorflow optimizers <a href="https://www.tensorflow.org/api_guides/python/train" target="_blank" rel="noopener">here</a>
-If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm.
-  Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
+      <p>If we had to underline a concept about optimizers it would be the learning_rate .We could define the learning_rate as a value used by the learning algorithm to determine how quickly the weights are adjusted. It determines the adquisition time for neurons with weights that are trained using the algortihm. </p>
+      <p>Bellow we describe the parameters and the main characteristics of the optimizers wich you can try in the model. Note that the model has been defined as bellow and optimizers have been changed for that model : </p>
       <img src="optimizer.jpg" alt="cercei_queen">
     </google-codelab-step>
     <google-codelab-step  
-      label="Comparissons and Conclussions" 
+      label="Comparisons and Conclusions" 
       step="6" 
       duration="10">     
       <h2>Comparison</h2>
@@ -300,17 +295,19 @@ Please, to know more about this function visit the awesome <a href="https://www.
 
       <h2>Conclusions</h2> 
       <p>Wide+deep learning is great for large scale datasets that take into account both categorical and continuous features that include a numerical and embeding form . Having a self critical mode, we might have used a more large dataset with more Game of Thrones characters  although the nature of the dataset is great for continuous and categorical clasification.
-The accuracy of the model changes by design taking into account the hidden units of the model, the activation function, and the optimizers. Having more or less layers and hidden units does not imply that the functioning of the model might be better or worse . 
-Choosing the wide and deep learning settings carefully taking into account the problems they usually solve is also a useful task to take , as well as the learning rate. 
-The best result of the model is pasted with the accuracy as follows :
+      <p>The accuracy of the model changes by design taking into account the hidden units of the model, the activation function, and the optimizers. Having more or less layers and hidden units does not imply that the functioning of the model might be better or worse . </p>
+      <p>Choosing the wide and deep learning settings carefully taking into account the problems they usually solve is also a useful task to take , as well as the learning rate. </p>
+      <p>The best result of the model is pasted with the accuracy as follows : </p>
 
 
-        You can help us with the results of changing the model, generalizing in hypothesis :
+       <p>You can help us with the results of changing the model, generalizing in hypothesis : </p>
         
-In the model, if you increase the hidden layers and combine the number of neurons , the accuracy of the model increases or decreases? .
+<p>In the model, if you increase the hidden layers and combine the number of neurons , the accuracy of the model increases or decreases? . </p>
 Please, fill your model conclussions in this <a href="https://docs.google.com/forms/d/1QLNq6nxWIJRuO-JiK3wgnLaeW2X3wbFS1edzzj59cLQ/edit" target="_blank" rel="noopener">Form</a>
-Take this feedback form to tell us more about how useful it was and dig into it if you want to know more </p>   
+<p>Take this feedback form to tell us more about how useful it was and dig into it if you want to know more </p>   
 
       <img src="5_Comic.png" alt="TensorFlow Game of Thrones"> 
+       <p>Code and Review :  </p>   <a href="https://github.com/ssaavedra" target="_blank" rel="noopener">Santiago Saavedra</a> 
+       <p>Codelab documentation and images : </p>   <a href="https://github.com/SoyGema" target="_blank" rel="noopener">Gema Parreño</a> 
 </body>
 </html>
