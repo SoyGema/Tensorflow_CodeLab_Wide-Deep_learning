@@ -99,15 +99,16 @@ The aim of this Codelab is to dig into wide+deep neural network model  to combin
   During this 0 point  we will serve as company for Tensorflow Codelab based on Game of Thrones Data, in order to provide a Neural Network model to classify the probability of Death of Game of Thrones characters with wide+deep model .
 There is some data theory we will dive in when implementing the model, but first we will dig a little bit in the data in order to know more about the behaviour of our dataset </p>
       <p>
-<p><a href="https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/wide%2Bdeep_code" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
-You can download the data from the button below. The original dataset has been released in Kaggle and we have been filling the information in Game of Thrones wiki focusing on title, culture . </p>
+<p><a href="https://github.com/codelab-tf-got/code/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>
+      <p>You can download the data from the button below. The original dataset has been released in Kaggle and we have been filling the information in Game of Thrones wiki focusing on title, culture . </p>
       <p>
       <img src="Table1.jpg" alt="Data">
    
-In one first approach of the dataset we extract the following useful information about the dataset, wich we consider a significant first approach for finding correlations and relationships in between variables 
-  NUMBER OF CHARACTERS :  1946
-  MEDIAN OF  AGE : 27
-        CORRELATION BETWEEN Number of Death Relationships and Popularity : 0.663 </p>
+In one first approach of the dataset we extract the following useful information about the dataset, wich we consider a significant first approach for finding correlations and relationships in between variables </p>
+ 
+      <p> NUMBER OF CHARACTERS :  1946 </p>
+      <p>  MEDIAN OF  AGE : 27 </p>
+      <p>CORRELATION BETWEEN Number of Death Relationships and Popularity : 0.663 </p>
       <p>
   Here we have some graphics that show correlation among data , having into account that most of them show relationships in between popularity and other characteristics .
       <img src="1_CultureGOT.png" alt="Culture Analysis">  Game of Thrones character ecosystem shows a diverse culture approach that prints a diverse atmosphere , without a doubt it really brings to the table a rich atmosphere to enjoy. Among all cultures, the most significant are Valyrian - as House Targaryen members- , Northmen -like watchmen -that has the highest value in culture with 143 characters,  and Andals - like House Lannister. 
@@ -115,7 +116,7 @@ In one first approach of the dataset we extract the following useful information
 However, the median of popularity is 0.03344
   Below we show a comparative table in between the top 10 popular characters and the top 10 probability likelihood of Death, can you find any relationship in between it? 
 As a comparative conclusion, we might underline the popularity of Baratheons and Starks and their absence from the high probability of death and the amounts of Targaryens that seems to be related with life ending situations.
-####--------------------------COMPONENT TABLE --------------------------------#####
+
 Baratheons are among the most popular and also far away from the most probability of death
       <p>
  <img src="3_Tensorflow_PDr.gif" alt="Popularity VS number of Death Relations">
@@ -171,7 +172,7 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       <img src="Download_thecodelab.jpg" alt="network">        
         <li>Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csvd </li>
         <li>Open the file and change the path in your dataset : data_set = ‘your_path_here’ </li>
-        <li>In console, execute the program  :~ $ python 'program'</li>
+        <li>In console, execute the program  :~ $ python 'program' --training_mode learn_runner --model_dir /Base directory for output models --model_type 'wide_n_deep' --steps 200</li>
         <li>In console, execute Tensorflow  :~ $ tensorboard --logdir =/tmp/model/ </li>
         <li>A fair amount of time</li>
       </ul>      
@@ -201,14 +202,25 @@ Wide+Deep learning combines the benefits the Memorization and generalization , w
       <p>Categorical variables are also known as discrete or qualitative variables. Categorical variables can be further categorized as either nominal, ordinal or dichotomous. Nominal variables are variables that have two or more categories, but which do not have an intrinsic order.
 Continuos variables are those that refers to continuous values such as numbers </p> 
       <pre><code>
-CATEGORICAL_COLUMNS = ["alive", "title", "male", "culture",
-                       "house", "spouse", "isAliveMother", "isAliveFather", "isAliveHeir",
-                       "isAliveSpouse", "isMarried", "isNoble", "numDeadRelations",
-                       "boolDeadRelations", "isPopular" , "popularity"]
+CATEGORICAL_COLUMN_NAMES = only_existing([
+    'male',
+    'culture',
+    'mother',
+    'father',
+    'title',
+    'heir',
+    'house',
+    'spouse',
+    'numDeadRelations',
+    'boolDeadRelations',
+], COLUMNS)
 
-CONTINUOUS_COLUMNS = ["name", "dateOfBirth",  "mother", "father",
-                      "heir", "book1", "book2", "book3", "book4", "book5", "age",
-                      "isAlive", "house", "title", "numDeadRelations"]
+CONTINUOUS_COLUMNS = only_existing([
+  'age',
+  'popularity',
+  'dateOfBirth',
+], COLUMNS)
+
       </code></pre>
     </google-codelab-step>   
     <google-codelab-step  
@@ -223,18 +235,11 @@ We define the linear variables in the columns
 We execute the linear classifier 
 
 Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
-      <img src="4_Comic.png" alt="crossing_narrow_sea">    
+      <img src="WideDEF.gif" alt="crossing_narrow_sea">    
       <pre><code>
-      # Wide columns and deep columns.
-wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, book2,
-                book3, book4, book5, age, isAlive
-                tf.contrib.layers.crossed_column([house, title],
-                                                 hash_bucket_size=int(1e4)),
-                tf.contrib.layers.crossed_column(
-                    [age_buckets, house, title],
-                    hash_bucket_size=int(1e6)),
-                tf.contrib.layers.crossed_column([numDeadRelations, title],
-                                                 hash_bucket_size=int(1e4))]
+  if FLAGS.model_type == "wide":
+    m = tf.contrib.learn.LinearClassifier(model_dir=model_dir,
+                                          feature_columns=wide_columns)
       </code></pre> 
     </google-codelab-step>
     <google-codelab-step  
@@ -246,36 +251,30 @@ wide_columns = [name, dateOfBirth, DateoFdeath, mother, father, heir, book1, boo
       <p>Generalization - Deep Model-  the model is a Feedfoward neural network that works with categorical features . there exist Transitivity of correlation and explores feature combinations that have never or rarely occurred in the past. It improves the diversity of recommended items . This generalization can be added by using features that are less granular . 
 So at the end this model is great for combining two different models of classification using neural Networks. You can see how this model has been working with </p> 
       <h2>Deep layer</h2>  
-      <p>Embeddings are mathematical abstractions of categorical data. Their main purpose is to find relationships in between the data and show them in a 3 dimensional space.
-Tensorflow has released its own playground for embeddings using words and image data . You can find it here . </p>
       <pre><code>
-    deep_columns = [
-      tf.contrib.layers.embedding_column(title, dimension=8),
-      tf.contrib.layers.embedding_column(house, dimension=8),
-      tf.contrib.layers.embedding_column(culture, dimension=8),
-      tf.contrib.layers.embedding_column(isAliveNoble, dimension=8),
-      tf.contrib.layers.embedding_column(numberDeadRelations,
-                                         dimension=8),
-      tf.contrib.layers.embedding_column(popularity, dimension=8),
-      male,
-      spouse,
-      isPopular,
-      spouse,
-      isMarried,
-  ]
-    </google-codelab-step>  
-    <google-codelab-step     
-       </code></pre> 
+  elif FLAGS.model_type == "deep":
+    m = tf.contrib.learn.DNNClassifier(model_dir=model_dir,
+                                       feature_columns=deep_columns,
+                                       hidden_units=[100, 50])
+      </code></pre> 
+    </google-codelab-step>
+    <google-codelab-step
+      label="Network Structure : Combining wide+deep learning model" 
+      step="5.3" 
+      duration="10">      
       <h2>Combining wide and deep learning model into one</h2>      
       <p>The wide models and deep models are combined by summing up their final output log odds as the prediction, then feeding the prediction to a logistic loss function. All the graph definition and variable allocations have already been handled for you under the hood, so you simply need to create a DNNLinearCombinedClassifier: </p>
+      <p> In this case, there are two layers with 100 and 50 neurons each. You can select your own number of layers and neurons </p>
       <pre><code>
-      import tempfile
-model_dir = tempfile.mkdtemp()
-m = tf.contrib.learn.DNNLinearCombinedClassifier(
-    model_dir=model_dir,
-    linear_feature_columns=wide_columns,
-    dnn_feature_columns=deep_columns,
-    dnn_hidden_units=[100, 50])      
+  else:
+    m = tf.contrib.learn.DNNLinearCombinedClassifier(
+      model_dir=model_dir,
+      linear_feature_columns=wide_columns,
+      dnn_feature_columns=deep_columns,
+      dnn_hidden_units=[100, 50],
+      fix_global_step_increment_bug = True,
+    )
+  return m  
       </code></pre>
     </google-codelab-step>
     <google-codelab-step  
@@ -306,14 +305,10 @@ Choosing the wide and deep learning settings carefully taking into account the p
 The best result of the model is pasted with the accuracy as follows :
 
 
-        You can help us with the results of changing the model, generalizing in our two main hypothesis :
+        You can help us with the results of changing the model, generalizing in hypothesis :
         
-In the model, if you increases the hidden layers, the accuracy of the model …………..
-In the model, changing the activation function from ……………………. To ………………. increases/decreases accuracy in ………….
-
-Please, fill your model conclussions in this form 
-
-There is still work to do to optimize this codelab.
+In the model, if you increase the hidden layers and combine the number of neurons , the accuracy of the model increases or decreases? .
+Please, fill your model conclussions in this <a href="https://docs.google.com/forms/d/1QLNq6nxWIJRuO-JiK3wgnLaeW2X3wbFS1edzzj59cLQ/edit" target="_blank" rel="noopener">Form</a>
 Take this feedback form to tell us more about how useful it was and dig into it if you want to know more </p>   
 
       <img src="5_Comic.png" alt="TensorFlow Game of Thrones"> 
