@@ -167,16 +167,20 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       duration="10">
       <p>
       <h2>Downloading the CodeLab</h2>  
+      <p><a href="https://github.com/codelab-tf-got/code/archive/master.zip" target="_blank"><paper-button class="colored" raised><iron-icon icon="file-download"></iron-icon>Download source code</paper-button></a></p>      
       <p>You can download the code and the data below. We suggest you to download both and put them in the same folder .  We will be explaining afterwards in each model which part of the codes matches with each part of wide + deep learning model . 
     Once you have it downloaded into your computer, you can play with it . </p>              
       <h2 class="checklist">CodeLab Structure</h2>
       <ul>
       <img src="Download_thecodelab.jpg" alt="network">        
-        <li>Download the code and the data_set and put it on a folder. It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </li>
-        <li>Open the file and change the path in your dataset : data_set = ‘your_path_here’ </li>
-        <li>In console, execute the program  :~ $ python 'program' --training_mode learn_runner --model_dir /Base directory for output models --model_type 'wide_n_deep' --steps 200</li>
-        <li>In console, execute Tensorflow  :~ $ tensorboard --logdir =/tmp/model/ </li>
-        <li>A fair amount of time</li>
+        <li>Download the code and the data_set and put it on a folder. 
+          <p>It should contain the file wide+deep_Tensorflow_GOT and the file GOT_data.csv </p> </li>
+        <li>Open the file and change the path in your dataset :
+          <p>data_set = ‘your_path_here’ </p> </li>
+        <li>In console, execute the program  :
+          <p>~ $ python 'program' --training_mode learn_runner --model_dir /Base directory for output models --model_type 'wide_n_deep' --steps 200 </p></li>
+        <li>In console, execute Tensorflow  :
+          <p>~ $ tensorboard --logdir =/tmp/model/ </p> </li>
       </ul>      
     </google-codelab-step>     
     <google-codelab-step  
@@ -186,7 +190,8 @@ $ pip install tensorflow      # Python 2.7; CPU support (no GPU support)
       <p>
       <h2>Network Structure</h2>    
       <p> During the next session we will explain the architecture of the Wid+Deep learning model having into consideration the published paper by Google. We also recommend the <a href="https://www.youtube.com/watch?v=NV1tkZ9Lq48&list=PLOU2XLYxmsIKGc_NBoIhTn2Qhraji53cv&index=17" target="_blank" rel="noopener">talk</a> given by Heng-Tze Cheng at Tensorflow Dev Summit 2017 . </p>
-      <img src="Wide+DeepLearning.gif" alt="network">                
+      <img src="Wide+DeepLearning.gif" alt="network">  
+      <p> Image from wide+deep tutorial </p>
       <p> The aim of this model is to combine the benefits of memorization+generalization models, in wich wide model is directly relevant to features and deep model improves the diversity of recommended systems. 
 The abstraction of concepts in this text comes from the paper wide + deep learning for recommender systems  <a href="https://arxiv.org/pdf/1606.07792.pdf" target="_blank" rel="noopener">paper</a></p>     
       <p>With less feature engineering, deep neural networks can generalize better to unseen feature combinations through low-dimensional dense embeddings learned for the sparse features. However, deep neural networks with embeddings can over-generalize
@@ -230,7 +235,8 @@ We define the linear variables in the columns
 We execute the linear classifier 
 
 Here the design of the net comes with the combination of features that can combine the information in order to offer a suitable conclusion </p> 
-      <img src="WideDEF.gif" alt="crossing_narrow_sea">    
+      <img src="WideDEF.gif" alt="crossing_narrow_sea">
+      <p> Image from wide+deep tutorial </p>
       <pre><code>
   if FLAGS.model_type == "wide":
     m = tf.contrib.learn.LinearClassifier(model_dir=model_dir,
@@ -243,6 +249,7 @@ Here the design of the net comes with the combination of features that can combi
       duration="10">      
       <h2>Deep layer</h2>
       <img src="Deep.gif" alt="netkork">
+      <p> Image from wide+deep tutorial </p>
       <p>Generalization - Deep Model-  the model is a Feedfoward neural network that works with categorical features . there exist Transitivity of correlation and explores feature combinations that have never or rarely occurred in the past. It improves the diversity of recommended items . This generalization can be added by using features that are less granular . 
 So at the end this model is great for combining two different models of classification using neural Networks. You can see how this model has been working with </p> 
       <h2>Deep layer</h2>  
@@ -307,7 +314,7 @@ Please, fill your model conclussions in this <a href="https://docs.google.com/fo
 <p>Take this feedback form to tell us more about how useful it was and dig into it if you want to know more </p>   
 
       <img src="5_Comic.png" alt="TensorFlow Game of Thrones"> 
-       <p>Code and Review :  </p>   <a href="https://github.com/ssaavedra" target="_blank" rel="noopener">Santiago Saavedra</a> 
+       <p>Code :  </p>   <a href="https://github.com/ssaavedra" target="_blank" rel="noopener">Santiago Saavedra</a> 
        <p>Codelab documentation and images : </p>   <a href="https://github.com/SoyGema" target="_blank" rel="noopener">Gema Parreño</a> 
 </body>
 </html>
