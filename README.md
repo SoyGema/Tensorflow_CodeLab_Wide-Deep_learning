@@ -5,6 +5,12 @@
 Wide+Deep learning Neural Network Tensorflow
 Data used : Game of thrones data set from kaggle
 
+Made by : ssaaveda & SoyGema
+Special thanks to : Baenans & Flipper83
+
+You can find the codelab at https://soygema.github.io/TensorFlow-GOT/
+
+
 For running this codelab, you should have installed in your machine
 --Python 2.7 or Python 3
       $ pip install python
