@@ -13,7 +13,7 @@ You can find the codelab at https://soygema.github.io/TensorFlow-GOT/
 You can directly run the codelad in a docker container 
 ```
 docker pull tensorflow
-docker rum --rm -it -v $PWD:/model tensorflowgot/codelab --model_dir =/model
+docker run --rm -it -v $PWD:/model tensorflowgot/codelab --model_dir =/model
 docker run --rm -it -v $PWD:/model -p 6006:6006 tensorflow/tensorflow tensorboard --logdir=/model
 ```
 
