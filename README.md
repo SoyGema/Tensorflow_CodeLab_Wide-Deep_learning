@@ -68,3 +68,8 @@ Thanks!!
 
 ![alt tag](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/3_Comic.png)
 
+## ROADSHOW
+This codelab has been part of diverse community events, that include :
+      GDG Madrid DevFest (2016)
+      Big Data Coruna (2017)
+      GDG Andalucia Open Summer 
