@@ -48,18 +48,18 @@ To manage software packages for Python, you can type :
             $ pip3 install 'package_name'
 
 ## FAQ
-1. Do I need to know a lot about Tensorflow for running into this codelab?
-No, you should have a basic understanding of datascience, variable modeling and neural nets. The architecture is clearly defined 
-2. Wich Neural Network Model are you using for the codelab?
-We are using wide+deep learning model that combines the benefits of memorization+generalization 
-3. Can I commit or colaborate?
-Surething. We are looking for improvement in the following areas :
-      A. Getting more accurate data. If you are passionate about Game of Thrones and want to give us a hand with the dataset, you are more than wellcome.
-      B.Code . Yes, we would like to get more semantic and better with the code. Please don´t hesitate to push/commit in this journey
-      C. Feedback. We have create a feedback form that you can find at the end of the codelab. Please feel free to colaborate.
-      D. Share. Do you think anyone you meet would you like to learn more about Neuralnets and also loves Game of Throne? You can share this codelab .
-4. Wich is the best way to experience this codelab?
-You can experience this codelab in a lot of different ways. The most significant is to read chapter 1 and enjoy some datascience about game of thrones, then download the code, and change the model m, having the opportunity to change the optimizers and the hidden layers .
+1. Question:: Do I need to know a lot about Tensorflow for running into this codelab?  
+Answer: No, you should have a basic understanding of datascience, variable modeling and neural nets. The architecture is clearly defined  
+2. Question:: Wich Neural Network Model are you using for the codelab?  
+Answer: We are using wide+deep learning model that combines the benefits of memorization+generalization  
+3. Question:: Can I commit or colaborate?
+Answer: Surething. We are looking for improvement in the following areas :  
+      * Getting more accurate data. If you are passionate about Game of Thrones and want to give us a hand with the dataset, you are more than welcome.
+      * Code. Yes, we would like to get more semantic and better with the code.   Please don´t hesitate to push/commit in this journey.
+      * Feedback. We have create a feedback form that you can find at the end of the codelab. Please feel free to colaborate.
+      * Share. Do you think anyone you meet would you like to learn more about Neuralnets and also loves Game of Throne? You can share this codelab.
+4. Question: Which is the best way to experience this codelab?  
+Answer: You can experience this codelab in a lot of different ways. The most significant is to read chapter 1 and enjoy some datascience about game of thrones, then download the code, and change the model m, having the opportunity to change the optimizers and the hidden layers .
 You can also read it without download the data .
 
 Please, note that this is an going work and you might find some improvement areas.
@@ -73,7 +73,7 @@ This codelab has been part of diverse community events, that include :
       
 - [x] GDG Madrid DevFest (2016)
 - [x] BigData Coruna 
-- [x] GDG Andalucia OpenSummer
+- [x] GDG Andalucia Summer
 - [ ] Google Developers Group Spain Summit 2017
 
 If you would like to host an event or run a workshop about this codelab, please contact for more materials 
