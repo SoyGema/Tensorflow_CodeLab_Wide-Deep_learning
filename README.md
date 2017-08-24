@@ -71,9 +71,9 @@ Thanks!!
 ## ROADSHOW
 This codelab has been part of diverse community events, that include :
       
-- [x] GDG Madrid DevFest (2016)
-- [x] BigData Coruna 
-- [x] GDG Andalucia Summer
+- [x] GDG Madrid DevFest 2016
+- [x] BigData Coruna 2017
+- [x] GDG Andalucia Summer 2017
 - [ ] Google Developers Group Spain Summit 2017
-
+- [ ] Pycones 2017
 If you would like to host an event or run a workshop about this codelab, please contact for more materials 
