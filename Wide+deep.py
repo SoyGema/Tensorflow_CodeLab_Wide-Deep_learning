@@ -79,12 +79,12 @@ dataset_file_name = "../dataset/character-predictions.csv"
 df_base = pd.read_csv(dataset_file_name, sep=',',) # names=COLUMNS, skipinitialspace=True, skiprows=1)
 
 CATEGORICAL_COLUMN_NAMES = [
-    'house',
+    'male',
     'culture',
     'title',
     'name',
-    'is Alive',
-    'is Popular',
+    'isAlive',
+    'isPopular',
 ]
 
 BINARY_COLUMNS = [
@@ -118,7 +118,7 @@ AGE_BINS = [ 0, 4, 8, 15, 18, 25, 30, 35, 40, 45, 50, 55, 60, 65, 80, 65535 ]
 CONTINUOUS_COLUMNS = [
   'age',
   'popularity',
-  'numDeadrelations',
+  'numDeadRelations',
 ]
 
 UNUSED_COLUMNS = [
@@ -230,14 +230,14 @@ def input_fn(df):
   def mp(tensor):
     """Monkey-patch tensor to include get_shape"""
     from tensorflow.python.framework import tensor_util
-    shape = tensor_util.constant_value_as_shape(tensor._shape)
+    shape = tensor_util.constant_value_as_shape(tensor.dense_shape)
     tensor.get_shape = lambda: shape
     return tensor
 
   categorical_cols = {
     k: mp(tf.SparseTensor(indices=[[i, 0] for i in range(df[k].size)],
                        values=df[k].values,
-                       shape=[df[k].size, 1]))
+                       dense_shape=[df[k].size, 1]))
     for k in (list(CATEGORICAL_COLUMNS.keys()) + BINARY_COLUMNS)
   }
   # Merges the two dictionaries into one.
