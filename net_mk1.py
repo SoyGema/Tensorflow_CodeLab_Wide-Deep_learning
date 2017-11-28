@@ -1,14 +1,14 @@
 # Copyright 2016 The TF Codelab Contributors. All Rights Reserved.
 # Copyright 2016 The TensorFlow Authors. All Rights Reserved.
 #   http://www.apache.org/licenses/LICENSE-2.0
-# 
+#
 # This code was originaflly presented at GDGSpain DevFest
 # using character prediction from Tensorflow
 # https://github.com/bigpress/gameofthrones/blob/master/character-predictions.csv
 #
 # Latest version is always available at: https://github.com/codelab-tf-got/code/
 # Codelab test is available at: https://codelab-tf-cot.github.io
-# Codelab code  by @ssice . Front @SoyGema 
+# Codelab code  by @ssice . Front @SoyGema
 # ==============================================================================
 
 """Import Python 2-3 compatibility glue, ETL (pandas) and ML (TensorFlow/sklearn) libraries"""
@@ -26,7 +26,7 @@ from tensorflow.contrib.learn.python.learn.datasets import base
 from tensorflow.contrib.learn.python.learn.utils import input_fn_utils
 from tensorflow.contrib.learn.python.learn.utils import saved_model_export_utils
 
-from sklearn import cross_validation # to split the train/test cases
+from sklearn import model_selection # to split the train/test cases
 
 
 ## Uncomment the logging lines to see logs in the console
@@ -164,7 +164,7 @@ CATEGORICAL_COLUMNS = {
 preset_deep_columns = []
 
 def get_deep_columns():
-  """Obtains the deep columns of the model. 
+  """Obtains the deep columns of the model.
 
   In our model, these are the binary columns (which are embedded with
   keys "0" and "1") and the categorical columns, which are embedded as
@@ -223,7 +223,7 @@ def get_wide_columns():
 ##############################################################################
 def build_estimator(model_dir):
   """General estimator builder function.
-  
+
   The wide/deep part construction is below. This gathers both parts
   and joins the model into a single classifier.
 
@@ -349,7 +349,7 @@ def generate_experiment(output_dir, df_train, df_test):
     )
     return experiment
   return _experiment_fn
-      
+
 
 def fill_dataframe(df_base):
   """
@@ -378,7 +378,7 @@ def train_and_eval(job_dir=None):
   df_base[LABEL_COLUMN] = (
       df_base[LABEL_COLUMN].apply(lambda x: x)).astype(int)
 
-  df_train, df_test = cross_validation.train_test_split(df_base, test_size=0.2, random_state=42)
+  df_train, df_test = model_selection.train_test_split(df_base, test_size=0.2, random_state=42)
 
   model_dir = tempfile.mkdtemp() if not FLAGS.model_dir else FLAGS.model_dir
   print("model directory = %s" % model_dir)
