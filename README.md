@@ -9,7 +9,8 @@ Made by : ssaaveda & SoyGema
 Special thanks to : Baenans , Flipper83 ,Laura Morillo , Zolastro and iblancasa
 
 You can find the codelab at https://soygema.github.io/TensorFlow-GOT/
-Find also a jupyter notebook version at https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/GoTNotebook.ipynb
+
+Find also a [jupyter](http://jupyter.org/) notebook version at https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/GoTNotebook.ipynb
 
 You can directly run the codelad in a docker container 
 ```
