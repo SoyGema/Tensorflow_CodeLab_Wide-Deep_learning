@@ -1,3 +1,8 @@
+[![GitHub issues](https://img.shields.io/github/issues/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning.svg)](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/issues)
+[![GitHub forks](https://img.shields.io/github/forks/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning.svg)](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/network)
+[![GitHub stars](https://img.shields.io/github/stars/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning.svg)](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/stargazers)
+[![GitHub license](https://img.shields.io/github/license/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning.svg)](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/LICENSE)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FSoyGema%2FTensorflow_CodeLab_Wide-Deep_learning)
 
 
 ![alt tag](https://github.com/SoyGema/Tensorflow_CodeLab_Wide-Deep_learning/blob/master/Tensor-GOT-Polymer/0_Logo.jpg)
